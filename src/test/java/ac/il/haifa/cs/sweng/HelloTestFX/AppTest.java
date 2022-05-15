@@ -18,7 +18,6 @@ import javafx.stage.Stage;
 
 @ExtendWith(ApplicationExtension.class)
 public class AppTest {
-
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
@@ -44,7 +43,6 @@ public class AppTest {
 	@Test
 	void test_button_click(FxRobot robot) {
 		robot.clickOn(".button");
-		
 		FxAssert.verifyThat("#textField", TextInputControlMatchers.hasText("Hello World"));
 	}
 
